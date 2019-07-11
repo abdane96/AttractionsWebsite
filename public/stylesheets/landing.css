@@ -1,0 +1,164 @@
+#top-div {
+    box-shadow: 0 -1.5em 1em -1em #222;
+    width: 100%;
+    margin-top:60em;
+    background: #AB3F05;
+    text-align: center;
+    height: auto;
+    padding-bottom: 6em;
+    position: relative;
+}
+
+#second-div{
+    box-shadow: 0 -1.5em 1em -1em #222;
+    width: 100%;
+    background: #CC9500;
+    text-align: center;
+    padding-bottom: 6em;
+    position: relative;
+}
+
+#third-div{
+    box-shadow: 0 -1.5em 1em -1em #222;
+    width: 100%;    
+    background: #1D93FE;
+    text-align: center;
+    padding-bottom: 6em;
+    position: relative;
+}
+
+#footer{
+    box-shadow: 0 -1.5em 1em -1em #222;
+    color: #DDDDDD;
+    padding-top: 5em;
+    text-align: center;
+    background: #010101;
+    height: 100%;
+    position: relative;
+}
+
+#left-span{
+    top: 20em;
+}
+
+#right-span{
+    top: 20em;
+}
+
+#left-arrow{
+    color: #222428;
+    font-weight: bold;
+    font-size: 3em;
+    border-radius: 0.5em 0 0 0.5em
+}
+
+#right-arrow{
+    color: #222428;
+    font-weight: bold;
+    font-size: 3em;
+    border-radius: 0 0.5em 0.5em 0 
+}
+
+#add-h1{
+    color: black;
+    list-style-type: none;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 0.2em;
+}
+
+#navbarNavDropdown .navbar-brand{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-custom{
+    color: #FFFFFF;
+    background-color: #333;
+}
+
+.navbar {
+    margin-bottom: 0;
+    box-shadow: 0 2em 1em -1em #222;
+}
+
+.fa-sign-in{
+	padding-right: 0.5em;
+}
+
+.fa-user-plus{
+	padding-right: 0.5em;
+}
+
+.jumbotron{
+	background-image: url("/images/camping2.jpg");
+ 	background-size: cover;
+ 	color: #1D93FE;
+ 	background-repeat: no-repeat;
+ 	height: 100%;
+    position:fixed;
+    padding-top: 5em;
+    top:0;
+    width:100%;
+    text-align: center;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+}
+
+.images{
+    position: relative;
+}
+
+.captions{
+    position: absolute;
+    top: 91%;
+    z-index: 1;
+    background-color: #28A745;
+    color: #222428;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.dot {
+    cursor: pointer;
+    height: 2.5em;
+    width: 2.5em;
+    margin: 1em 2.5em 0 2.5em;
+    background-color: #EBFFBB;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active, .dot:hover {
+    background-color: #28A745
+}
+
+figure img{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+h1{
+    z-index: 1;
+    padding: 1em;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #eceeef;
+}
