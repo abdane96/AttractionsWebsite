@@ -1,14 +1,15 @@
 <% include partials/header %>
-	<div class="jumbotron jumbotron-fluid">
-		<div class="container">
+	
+	<!--<div class="jumbotron jumbotron-fluid">-->
+	<!--	<div class="container">-->
 
-		</div>
-	</div>
+	<!--	</div>-->
+	<!--</div>-->
 
 	<div id="top-div" class="sections">
 		<div class="row">
 			<h1 class="col-sm-12">Activities</h1>
-			<span id="left-span"class="col-md-2 d-none d-lg-block"><button id="left-arrow" class="btn btn-success btn-block">&#10094;</button></span>
+			<span id="left-span"class="col-md-2 d-none d-lg-block"><button id="left-arrow" class="btn btn-success btn-block" onclick="plusSlides(-1)">&#10094;</button></span>
 			<div class="col-lg-8 col-sm-12 outer">				
 				<figure class="images">										
 					<img id="Outdoor" src="/images/Hiking.jpg">		
@@ -23,7 +24,7 @@
 					<div class="captions">Join Us!</div>	
 				</figure>			
 			</div>
-			<span id="right-span"class="col-md-2 d-none d-lg-block"><button id="right-arrow" class="btn btn-success btn-block">&#10095;</button></span>
+			<span id="right-span"class="col-md-2 d-none d-lg-block"><button id="right-arrow" class="btn btn-success btn-block" onclick="plusSlides(1)">&#10095;</button></span>
 		</div>
 		<div class="row">
 			<span class="col-sm-2"></span>
@@ -53,4 +54,5 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="/scripts/landing.js"></script>
 <% include partials/footer %>

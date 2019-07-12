@@ -1,7 +1,6 @@
 #top-div {
     box-shadow: 0 -1.5em 1em -1em #222;
     width: 100%;
-    margin-top:60em;
     background: #AB3F05;
     text-align: center;
     height: auto;
@@ -73,8 +72,35 @@
     left: 0;
 }
 
+#welcome{
+    padding-top: 0.5em;
+    padding-right: 2em;
+}
+
+#welcome .nav-link{
+    display: inline;
+}
+
+#usernameInDropdown{
+    display: none;
+}
+
+.flash{
+    padding-top: 7em;
+}
+
+@media screen and (max-width: 1024px) {
+    #welcome{
+        display: none;
+    }
+    #usernameInDropdown{
+        display: block;
+    }
+}
+
+
 .navbar-custom{
-    color: #FFFFFF;
+    color: #eeefef;
     background-color: #333;
 }
 
@@ -156,5 +182,5 @@ h1{
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background: #eceeef;
+    background: #333333;
 }

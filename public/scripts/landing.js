@@ -1,33 +1,27 @@
+/****************SlideShow***************/
 var slideIndex = 1;
 var myTimer;
+var H1text;
 
 slideShow(slideIndex);
 setTimeout(function(){
 	changeNavBarColor();
-}, 100);
-
-var H1text;
-
+}, 1000);
 
 myTimer = setInterval(function(){	
 	plusSlides(1);
 }, 5000);
 
-$("#left-arrow").on("click", function(){
-	plusSlides(-1);
-});
-
-$("#right-arrow").on("click", function(){
-	plusSlides(1);
-});
-
-var mc = new Hammer(document.getElementById('top-div'));
+var mc = new Hammer(document.getElementById('top-div')); //For swiping slides on phones
 mc.on("swipeleft", function(event) {
     plusSlides(1);
 });
 mc.on("swiperight", function(event) {
     plusSlides(-1);
 });
+
+
+/****************Functions***************/
 
 function currentSlide(n){
 	clearInterval(myTimer);

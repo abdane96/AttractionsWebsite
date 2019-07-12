@@ -40,60 +40,25 @@ passport.serializeUser(user.serializeUser());
 passport.deserializeUser(user.deserializeUser());
 
 
+/**************Flash***************/
+const flash = require("connect-flash");
+app.use(flash());
+
+
 /**************Routes***************/
-app.get('/', (req,res) =>{
-	res.render('landing');
+const rootRoutes = require("./routes/index"),
+	authRoutes = require("./routes/auth");
+
+app.use(function(req, res, next) {// middleware used to avoid checking if a user is logged in every route
+	res.locals.currentUser = req.user;
+	res.locals.error = req.flash("error");
+	res.locals.success = req.flash("success");
+	next();
 });
 
-app.get('/about', (req,res) =>{
-	res.render('about');
-});
+app.use(rootRoutes);
+app.use(authRoutes);
 
-app.get('/indoor', (req,res) =>{
-	res.render('indoor');
-});
-
-app.get('/outdoor', (req,res) =>{
-	res.render('outdoor');
-});
-
-app.get('/contact', (req,res) =>{
-	res.render('contact');
-});
-
-
-/**************Authorization-Routes***************/
-app.get('/register', (req,res) =>{
-	res.render('register');
-});
-
-app.post('/register', (req,res) =>{
-	user.register(
-		new user({username: req.body.username}),
-		req.body.password,
-		(err, newUser) => {
-			if(err){
-				console.log(err);
-				return res.render("register");
-			}
-			passport.authenticate("local")(req, res, function(){
-				res.redirect("/");
-			});
-		}
-	);
-});
-
-app.get('/login', (req,res) =>{
-	res.render('login');
-});
-
-app.post('/login', passport.authenticate("local",{
-	successRedirect: "/",
-	failureRedirect: "/login"
-}), (req,res) =>{
-});
-
-
-app.listen(3000, () =>{
+app.listen(8080, () =>{
 	console.log('listening');
 });
