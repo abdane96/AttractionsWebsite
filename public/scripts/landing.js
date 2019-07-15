@@ -23,13 +23,6 @@ mc.on("swiperight", function(event) {
     plusSlides(-1);
 });
 
-// $("#map").googleMap();
-//     $("#map").addMarker({
-//       coords: [48.895651, 2.290569], // GPS coords
-//       url: 'http://www.tiloweb.com', // Link to redirect onclick (optional)
-//       id: 'marker1' // Unique ID for your marker
-// });
-
 
 /****************Google Maps***************/
 initialize();
@@ -75,7 +68,7 @@ function createMarker(place) {
 	});
 	
 	marker.addListener('click', function() {
-	infowindow.setContent('<div><strong>' + place.name + '</strong><br>');
+		infowindow.setContent('<div><strong>' + place.name + '</strong><br>');
 		infowindow.open(map, this);
 	});
 }
