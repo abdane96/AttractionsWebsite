@@ -52,12 +52,12 @@ function callback(results, status) {
 	if (status == google.maps.places.PlacesServiceStatus.OK) {
 		for (var i = 0; i < results.length; i++) {
 		  var place = results[i];
-		  createMarker(results[i]);
+		  createMarker(results[i], results, i);
 		}
 	}
 }
 
-function createMarker(place) {
+function createMarker(place, places, Index) {
 
 	var infowindow = new google.maps.InfoWindow();
 	
@@ -70,6 +70,11 @@ function createMarker(place) {
 	marker.addListener('click', function() {
 		infowindow.setContent('<div><strong>' + place.name + '</strong><br>');
 		infowindow.open(map, this);
+		places.forEach(function(element, index){
+			if(index == Index){
+				infowindow.close(map, element);
+			}
+		});
 	});
 }
 

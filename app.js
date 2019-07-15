@@ -61,6 +61,11 @@ app.use(profileRoutes)
 app.use(rootRoutes);
 app.use(authRoutes);
 
-app.listen(8080, () =>{
-	console.log('listening');
+
+app.listen(process.env.PORT || 8080, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
+
+// app.listen(8080, () =>{
+// 	console.log('listening');
+// });
