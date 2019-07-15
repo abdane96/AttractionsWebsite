@@ -46,16 +46,18 @@ app.use(flash());
 
 
 /**************Routes***************/
-const rootRoutes = require("./routes/index"),
-	authRoutes = require("./routes/auth");
+const profileRoutes = require("./routes/profile"),
+	  rootRoutes    = require("./routes/index"),
+	  authRoutes    = require("./routes/auth");
 
-app.use(function(req, res, next) {// middleware used to avoid checking if a user is logged in every route
+app.use(function(req, res, next) {
+	// middleware used to avoid checking if a user is logged in every route
 	res.locals.currentUser = req.user;
 	res.locals.error = req.flash("error");
 	res.locals.success = req.flash("success");
 	next();
 });
-
+app.use(profileRoutes)
 app.use(rootRoutes);
 app.use(authRoutes);
 
