@@ -11,13 +11,22 @@
 #second-div{
     box-shadow: 0 -1.5em 1em -1em #222;
     width: 100%;
-    background: #CC9500;
+    background: #6A1E82;
     text-align: center;
     padding-bottom: 6em;
     position: relative;
 }
 
 #third-div{
+    box-shadow: 0 -1.5em 1em -1em #222;
+    width: 100%;
+    background: #CC9500;
+    text-align: center;
+    padding-bottom: 6em;
+    position: relative;
+}
+
+#last-div{
     box-shadow: 0 -1.5em 1em -1em #222;
     width: 100%;    
     background: #1D93FE;
@@ -48,28 +57,35 @@
     color: #222428;
     font-weight: bold;
     font-size: 3em;
-    border-radius: 0.5em 0 0 0.5em
+    border-radius: 0.5em 0 0 0.5em;
+    box-shadow: -0.2em 0.2em 0.2em 0.1em #222;
 }
 
 #right-arrow{
     color: #222428;
     font-weight: bold;
     font-size: 3em;
-    border-radius: 0 0.5em 0.5em 0 
+    border-radius: 0 0.5em 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em 0.1em #222;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;   
 }
 
 #add-h1{
-    color: black;
+    color: #DEFDEF;
     list-style-type: none;
     text-align: center;
-    font-size: 3em;
-    padding-top: 0.2em;
+    font-size: 2em;
+    padding-top: 0.6em;
 }
 
 #navbarNavDropdown .navbar-brand{
     position: absolute;
     top: 0;
     left: 0;
+    
 }
 
 #welcome{
@@ -83,6 +99,30 @@
 
 #usernameInDropdown{
     display: none;
+}
+
+#map{
+    height: 50em;
+    box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
+}
+
+.fa-free-code-camp{
+    padding-right: 0.5em;
+}
+
+.jumboButton{
+    color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset, 0 2em 1em -1em #222;
+    margin-top: 8em;
+    margin-bottom: 2em;
+    font-size: 2em;
+    border: 0;
+    background: #E14500;
+}
+
+.jumboButton:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(40, 161, 22, 0.7) 0 0px 0px 40px inset;
 }
 
 .flash{
@@ -109,25 +149,18 @@
     box-shadow: 0 2em 1em -1em #222;
 }
 
-.fa-sign-in{
-	padding-right: 0.5em;
-}
-
-.fa-user-plus{
+.fa-sign-in, .fa-sign-out, .fa-user-plus, .fa-user-circle{
 	padding-right: 0.5em;
 }
 
 .jumbotron{
-	background-image: url("/images/camping2.jpg");
- 	background-size: cover;
- 	color: #1D93FE;
- 	background-repeat: no-repeat;
- 	height: 100%;
-    position:fixed;
-    padding-top: 5em;
-    top:0;
-    width:100%;
+    background-image: url("/images/Jumbotron.jpg");
+    padding-top: 13em;
+    padding-bottom: 10em;
+    margin-bottom: 0em;
+    background-color: #FFF;
     text-align: center;
+    color: #EEEFFF;
 }
 
 .row{
@@ -159,7 +192,8 @@
     background-color: #EBFFBB;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color .6s ease
+    transition: background-color .6s ease;
+    margin-top: 5em;
 }
 
 .active, .dot:hover {
@@ -167,16 +201,17 @@
 }
 
 figure img{
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
     margin: 0;
     max-width: 100%;
 }
 
+.shadow-img{
+    box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
+}
+
 h1{
-    z-index: 1;
+    color: #eeefef;
     padding: 1em;
 }
 

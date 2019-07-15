@@ -1,30 +1,34 @@
 <% include partials/header %>
 	
-	<!--<div class="jumbotron jumbotron-fluid">-->
-	<!--	<div class="container">-->
-
-	<!--	</div>-->
-	<!--</div>-->
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+	    	<h2 class="display-4">All your camping needs, and more!</h2>
+	    	<p class="lead">Look no further, register below and let us take care of things!</p>
+    		<a type="button" href="/register" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Join today!</a>
+		</div>
+	</div>
 
 	<div id="top-div" class="sections">
 		<div class="row">
 			<h1 class="col-sm-12">Activities</h1>
-			<span id="left-span"class="col-md-2 d-none d-lg-block"><button id="left-arrow" class="btn btn-success btn-block" onclick="plusSlides(-1)">&#10094;</button></span>
+			<span class="col-md-1"></span>
+			<span id="left-span" class="col-md-1 d-none d-lg-block"><button id="left-arrow" class="btn btn-success btn-block" onclick="plusSlides(-1)">&#10094;</button></span>
 			<div class="col-lg-8 col-sm-12 outer">				
 				<figure class="images">										
-					<img id="Outdoor" src="/images/Hiking.jpg">		
+					<img class="shadow-img" id="Outdoor" src="/images/Hiking.jpg">		
 					<div class="captions">Outdoor</div>			
 				</figure>
 				<figure class="images">					
-					<img id = "Indoor" src="/images/indoor.jpg">	
+					<img class="shadow-img" id = "Indoor" src="/images/indoor.jpg">	
 					<div class="captions">Indoor</div>			
 				</figure>
 				<figure class="images">	
-					<img id = "Member" src="/images/member.png">	
+					<img class="shadow-img" id = "Member" src="/images/member.png">	
 					<div class="captions">Join Us!</div>	
 				</figure>			
 			</div>
-			<span id="right-span"class="col-md-2 d-none d-lg-block"><button id="right-arrow" class="btn btn-success btn-block" onclick="plusSlides(1)">&#10095;</button></span>
+			<span id="right-span"class="col-md-1 d-none d-lg-block"><button id="right-arrow" class="btn btn-success btn-block" onclick="plusSlides(1)">&#10095;</button></span>
+			<span class="col-md-1"></span>
 		</div>
 		<div class="row">
 			<span class="col-sm-2"></span>
@@ -37,20 +41,27 @@
 		</div>		
 	</div>
 	<div id="second-div" class="sections">
+		<h1 class="col-sm-12">Nearby Camps</h1>
 		<div class="row">
-			<span class="col-lg-2"></span>
-			<div class="col-sm-12 col-lg-8">
-				<h1>Shop</h1>
-				<img class="img-fluid" src="/images/shop.jpg">
-			</div>
+			<span class="col-md-1"></span>
+			<div id="map" class="col-md-10"></div>
 		</div>
 	</div>
 	<div id="third-div" class="sections">
 		<div class="row">
 			<span class="col-lg-2"></span>
 			<div class="col-sm-12 col-lg-8">
+				<h1>Shop</h1>
+				<img class="img-fluid shadow-img" src="/images/shop.jpg">
+			</div>
+		</div>
+	</div>
+	<div id="last-div" class="sections">
+		<div class="row">
+			<span class="col-lg-2"></span>
+			<div class="col-sm-12 col-lg-8">
 				<h1>Latest News</h1>
-				<img class="img-fluid" src="/images/news.jpg">
+				<img class="img-fluid shadow-img" src="/images/news.jpg">
 			</div>
 		</div>
 	</div>

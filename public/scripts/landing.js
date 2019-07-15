@@ -1,12 +1,15 @@
+/****************NavBar*****************/
+setTimeout(function(){
+	changeNavBarColor();
+}, 1000);
+
+
 /****************SlideShow***************/
 var slideIndex = 1;
 var myTimer;
 var H1text;
 
 slideShow(slideIndex);
-setTimeout(function(){
-	changeNavBarColor();
-}, 1000);
 
 myTimer = setInterval(function(){	
 	plusSlides(1);
@@ -19,6 +22,63 @@ mc.on("swipeleft", function(event) {
 mc.on("swiperight", function(event) {
     plusSlides(-1);
 });
+
+// $("#map").googleMap();
+//     $("#map").addMarker({
+//       coords: [48.895651, 2.290569], // GPS coords
+//       url: 'http://www.tiloweb.com', // Link to redirect onclick (optional)
+//       id: 'marker1' // Unique ID for your marker
+// });
+
+
+/****************Google Maps***************/
+initialize();
+var map;
+var service;
+var infowindow;
+
+function initialize() {
+	var pyrmont = new google.maps.LatLng(45.420422,-75.692429);
+	
+	map = new google.maps.Map(document.getElementById('map'), {
+	  center: pyrmont,
+	  zoom: 15
+	});
+	
+	var request = {
+		location: pyrmont,
+		radius: '5000',
+		type: ['restaurant']
+	};
+	
+	service = new google.maps.places.PlacesService(map);
+	service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+	if (status == google.maps.places.PlacesServiceStatus.OK) {
+		for (var i = 0; i < results.length; i++) {
+		  var place = results[i];
+		  createMarker(results[i]);
+		}
+	}
+}
+
+function createMarker(place) {
+
+	var infowindow = new google.maps.InfoWindow();
+	
+	
+	var marker = new google.maps.Marker({
+	    position: place.geometry.location,
+	    map: map
+	});
+	
+	marker.addListener('click', function() {
+	infowindow.setContent('<div><strong>' + place.name + '</strong><br>');
+		infowindow.open(map, this);
+	});
+}
 
 
 /****************Functions***************/
@@ -115,7 +175,7 @@ function changeNavBarColor(){
 			var currentPosition = $(window).scrollTop();
 			sections.forEach(function(element, index){
 				if(index < sections.length-1){
-					if(currentPosition > element.top && currentPosition < sections[index+1].top){
+					if(currentPosition >= element.top && currentPosition < sections[index+1].top){
 						H1text = element.H1;
 						fixH1(H1text);
 						$('.navbar').css('background-color', element.color);		
@@ -139,8 +199,8 @@ function changeNavBarColor(){
 	});
 }
 
-function fixH1(div){
-	$('#add-h1').replaceWith('<span id="add-h1">' + div + '</span>');
+function fixH1(text){
+	$('#add-h1').replaceWith('<span id="add-h1">' + text + '</span>');
 	if($(window).width() >= 975){
 		$('#add-h1').css({
 			'position': 'absolute',
@@ -149,6 +209,6 @@ function fixH1(div){
 			'z-index': '1'
 		});
 		var textSize = $("#add-h1").width();
-		$("#add-h1").css('margin-left', ($(".navbar").width()/2.2)-textSize/100);
+		$("#add-h1").css('margin-left', ($(".navbar").width()/2.1)-textSize/100);
 	}
 }
