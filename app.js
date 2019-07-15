@@ -61,7 +61,7 @@ app.use(profileRoutes)
 app.use(rootRoutes);
 app.use(authRoutes);
 
-
+// Heroku
 app.listen(process.env.PORT || 50236, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
