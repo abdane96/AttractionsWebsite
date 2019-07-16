@@ -1,3 +1,44 @@
-form{
-	margin-top: 10em;
+    .form-group{
+        
+    }
+    
+    .form-control{
+        padding-bottom:1.5em;
+        padding-top:1.5em;
+    }
+    
+    .sign-up-h1{
+        text-align: center;
+        padding-top: 2.2em;
+        font-size: 3em;
+        padding-bottom: 1em;
+    }
+
+@media screen and (max-width: 1024px) {
+    .form-group{
+        padding-top: 2em;
+    }
+    
+    .form-control{
+        padding-bottom:1.5em;
+        padding-top:1.5em;
+        font-size: 2em;
+    }
+    
+    .register-button{
+        font-size: 3em;
+    }
+}
+
+.backgroundImage{
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("/images/Jumbotron.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
 }

@@ -17,7 +17,7 @@
 <body>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark init navbar-custom">		
 		<a class="navbar-brand" href="/">
-			<img src="/images/logo.png" width="70" height="60" alt="">
+			<img class="MainLogo" src="/images/logo.png" alt="">
 		</a>		
 		<span id="add-h1">
 						
@@ -27,16 +27,11 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
-				<% if(currentUser){ %>
-					<li class="nav-item">
-						<a id="usernameInDropdown" class="nav-link" href="#"><i class="fa fa-user-circle"></i><%= currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1) %></a>
-					</li>
-				<% } %>
 				<li class="nav-item">
 					<a class="nav-link" href="/outdoor">Outdoor</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/outdoor">Indoor</a>
+					<a class="nav-link" href="/indoor">Indoor</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/about">About Us</a>
@@ -54,11 +49,9 @@
 						<a class="nav-link" href="/register"><i class="fa fa-user-plus"></i>Register</a>
 					</li>
 				<% }else{ %>
-					<ul class="navbar-nav">
-						<li id="welcome" class="nav-item">
-							<a class="nav-link" href="#"><i class="fa fa-user-circle"></i><%= currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1) %></a>
-						</li>
-					</ul>
+					<li class="nav-item">
+						<a class="nav-link" href="/logout"><i class="fa fa-user-circle"></i><%= currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1) %></a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/logout"><i class="fa fa-sign-out"></i>Logout</a>
 					</li>

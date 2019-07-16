@@ -8,6 +8,12 @@
     position: relative;
 }
 
+.MainLogo{
+    width: 3em;
+    height: 3em;
+}
+
+
 #second-div{
     box-shadow: 0 -1.5em 1em -1em #222;
     width: 100%;
@@ -38,11 +44,12 @@
 #footer{
     box-shadow: 0 -1.5em 1em -1em #222;
     color: #DDDDDD;
-    padding-top: 5em;
+    padding-top: 1em;
     text-align: center;
     background: #010101;
-    height: 100%;
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 #left-span{
@@ -105,6 +112,11 @@
     box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
 }
 
+.logo{
+    width: 3em;
+    height: 3em;
+}
+
 .fa-free-code-camp{
     padding-right: 0.5em;
 }
@@ -127,17 +139,6 @@
 .flash{
     padding-top: 7em;
 }
-
-@media screen and (max-width: 1024px) {
-    #welcome{
-        display: none;
-    }
-    
-    #usernameInDropdown{
-        display: block;
-    }
-}
-
 
 .navbar-custom{
     color: #eeefef;
@@ -201,14 +202,14 @@
     background-color: #28A745
 }
 
+.shadow-img{
+    box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
+}
+
 figure img{
     padding: 0;
     margin: 0;
     max-width: 100%;
-}
-
-.shadow-img{
-    box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
 }
 
 h1{
@@ -219,4 +220,23 @@ h1{
 body{
     font-family: 'Open Sans', sans-serif;
     background: #333333;
+}
+
+@media screen and (max-width: 1024px) {
+    .MainLogo {
+        width: 5em;
+        height: 5em;
+    }
+    
+    .navbar-custom{
+        font-size: 1.5em;
+    }
+    
+    #add-h1{
+        font-size: 1.5em;
+    }
+    
+    .navbar-toggler-icon{
+        font-size: 1.5em;
+    }
 }

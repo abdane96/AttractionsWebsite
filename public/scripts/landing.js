@@ -191,7 +191,7 @@ function changeNavBarColor(){
 
 function fixH1(text){
 	$('#add-h1').replaceWith('<span id="add-h1">' + text + '</span>');
-	if($(window).width() >= 975){
+	if($(window).width() > 980){
 		$('#add-h1').css({
 			'position': 'absolute',
 			'top': '0',
