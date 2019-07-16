@@ -1,18 +1,14 @@
-    .form-group{
-        
-    }
-    
-    .form-control{
-        padding-bottom:1.5em;
-        padding-top:1.5em;
-    }
-    
-    .sign-up-h1{
-        text-align: center;
-        padding-top: 2.2em;
-        font-size: 3em;
-        padding-bottom: 1em;
-    }
+.form-control{
+    padding-bottom:1.5em;
+    padding-top:1.5em;
+}
+
+.login-signup-h1{
+    text-align: center;
+    padding-top: 3em;
+    font-size: 3em;
+    padding-bottom: 1em;
+}
 
 @media screen and (max-width: 1024px) {
     .form-group{
@@ -25,7 +21,7 @@
         font-size: 2em;
     }
     
-    .register-button{
+    .login-signup-button{
         font-size: 3em;
     }
 }

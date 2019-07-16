@@ -137,7 +137,7 @@
 }
 
 .flash{
-    padding-top: 7em;
+    padding-top: 8em;
 }
 
 .navbar-custom{
@@ -224,8 +224,8 @@ body{
 
 @media screen and (max-width: 1024px) {
     .MainLogo {
-        width: 5em;
-        height: 5em;
+        width: 4em;
+        height: 4em;
     }
     
     .navbar-custom{
