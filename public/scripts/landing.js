@@ -25,57 +25,49 @@ mc.on("swiperight", function(event) {
 
 
 /****************Google Maps***************/
-initialize();
+
+initMap();
 var map;
 var service;
 var infowindow;
 
-function initialize() {
-	var pyrmont = new google.maps.LatLng(45.420422,-75.692429);
-	
-	map = new google.maps.Map(document.getElementById('map'), {
-	  center: pyrmont,
-	  zoom: 15
-	});
-	
-	var request = {
-		location: pyrmont,
+function initMap() {
+	var ottawa = new google.maps.LatLng(45.4215, -75.6972);
+
+    infowindow = new google.maps.InfoWindow();
+
+    map = new google.maps.Map(
+        document.getElementById('map'), {center: ottawa, zoom: 15});
+
+    var request = {
+    	location: ottawa,
 		radius: '5000',
-		type: ['restaurant']
-	};
-	
-	service = new google.maps.places.PlacesService(map);
-	service.nearbySearch(request, callback);
-}
+		types: ["restaurant"]
+    };
 
-function callback(results, status) {
-	if (status == google.maps.places.PlacesServiceStatus.OK) {
-		for (var i = 0; i < results.length; i++) {
-		  var place = results[i];
-		  createMarker(results[i], results, i);
+    service = new google.maps.places.PlacesService(map);
+
+    service.nearbySearch(request, function(results, status) {
+		if (status === google.maps.places.PlacesServiceStatus.OK) {
+    		for (var i = 0; i < results.length; i++) {
+        		createMarker(results[i]);
+        	}
+
+    		map.setCenter(results[0].geometry.location);
 		}
-	}
+    });
 }
 
-function createMarker(place, places, Index) {
-
-	var infowindow = new google.maps.InfoWindow();
-	
-	
+function createMarker(place) {
 	var marker = new google.maps.Marker({
-	    position: place.geometry.location,
-	    map: map
+		map: map,
+		position: place.geometry.location
 	});
-	
-	marker.addListener('click', function() {
-		infowindow.setContent('<div><strong>' + place.name + '</strong><br>');
+
+    google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(place.name);
 		infowindow.open(map, this);
-		places.forEach(function(element, index){
-			if(index == Index){
-				infowindow.close(map, element);
-			}
-		});
-	});
+    });
 }
 
 
