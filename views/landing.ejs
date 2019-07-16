@@ -4,7 +4,9 @@
 		<div class="container">
 	    	<h2 class="display-4">All your camping needs, and more!</h2>
 	    	<p class="lead">Look no further, register below and let us take care of things!</p>
+	    	<% if(!currentUser){ %>
     		<a type="button" href="/register" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Join today!</a>
+    		<% } %>
 		</div>
 	</div>
 
