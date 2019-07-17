@@ -8,11 +8,6 @@
     position: relative;
 }
 
-.MainLogo{
-    width: 3em;
-    height: 3em;
-}
-
 
 #second-div{
     box-shadow: 0 -1.5em 1em -1em #222;
@@ -50,6 +45,10 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#footer span{
+    padding-left: 1em;
 }
 
 #left-span{
@@ -109,16 +108,12 @@
 
 #map{
     height: 50em;
-    box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
+    box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
-.logo{
+.MainLogo{
     width: 3em;
     height: 3em;
-}
-
-.fa-free-code-camp{
-    padding-right: 0.5em;
 }
 
 .jumboButton{
@@ -150,7 +145,7 @@
     box-shadow: 0 2em 1em -1em #222;
 }
 
-.fa-sign-in, .fa-sign-out, .fa-user-plus, .fa-user-circle{
+.fa-sign-in, .fa-sign-out, .fa-user-plus, .fa-user-circle, .fa-free-code-camp{
 	padding-right: 0.5em;
 }
 
@@ -204,7 +199,7 @@
 }
 
 .shadow-img{
-    box-shadow: 1em 2em 1em -1em #222, 2em 2em 1em -1em #222;
+    box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
 figure img{

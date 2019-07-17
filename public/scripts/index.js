@@ -6,10 +6,12 @@ if($(".flash").css('display') === 'block'){
 
 
 /****************Footer***************/
-if ($("body").height() > $(window).height()) {
-    $("#footer").css({
-    	'position': 'relative',
-    	'height': '100%'
-	});
-    
+checkFooterPosition();
+function checkFooterPosition(){
+	if ($("body").height() > $(window).height()) {
+	    $("#footer").css({
+	    	'position': 'relative',
+	    	'height': '100%'
+		});
+	}
 }

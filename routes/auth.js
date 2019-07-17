@@ -9,7 +9,13 @@ router.get('/register', (req,res) =>{
 
 router.post('/register', (req,res) =>{
 	user.register(
-		new user({username: req.body.username}),
+		new user({
+			username: req.body.username,
+			firstName: req.body.firstName,
+			lastName: req.body.lastName,
+			email: req.body.email,
+			avatar: req.body.avatar
+		}),
 		req.body.password,
 		(err, newUser) => {
 			if(err){
@@ -17,7 +23,7 @@ router.post('/register', (req,res) =>{
 				return res.redirect("/register");
 			}
 			passport.authenticate("local")(req, res, function(){
-				req.flash("success", "Successfully registered, welcome "+user.username.charAt(0).toUpperCase() + user.username.slice(1)+"!");
+				req.flash("success", "Successfully registered, welcome "+newUser.username.charAt(0).toUpperCase() + newUser.username.slice(1)+"!");
 				res.redirect("/");
 			});
 		}
