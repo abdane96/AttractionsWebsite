@@ -54,7 +54,9 @@
 						<a class="nav-link" href="/users/<%= currentUser.id %>"><i class="fa fa-user-circle"></i><%= currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1) %></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/logout"><i class="fa fa-sign-out"></i>Logout</a>
+						<form action="/logout" method="post">
+							<button class="nav-link logout-btn"><i class="fa fa-sign-out"></i>Logout</button>
+						</form>
 					</li>
 				<% } %>
 			</ul>			

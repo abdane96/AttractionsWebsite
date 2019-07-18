@@ -6,13 +6,15 @@
 
 .editButton{
     font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .uploadButton{
     font-size: 1em;
 }
 
-#uploadText{
+.uploadText{
     text-align: center;
 }
 
@@ -27,4 +29,9 @@
     background: #EEEFEF;
     height: 20em;
     width: 15em;
+}
+
+.profileInfo{
+    padding-top: 11em;
+    color:#EEEFEF;
 }

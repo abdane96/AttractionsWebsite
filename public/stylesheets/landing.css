@@ -111,6 +111,11 @@
     box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
+.logout-btn{
+    border: none;
+    background: none;
+}
+
 .MainLogo{
     width: 3em;
     height: 3em;
