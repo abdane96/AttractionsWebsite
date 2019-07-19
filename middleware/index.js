@@ -1,7 +1,7 @@
 const middlewareObj = {
     loggedIn: function(req, res, next){
         if(req.isAuthenticated()){
-            return next()
+            return next();
         }else{
             res.redirect("/login");
         }
@@ -9,7 +9,7 @@ const middlewareObj = {
     
     isUser: function(req, res, next){
         if(req.user.id === req.params.id){
-            return next()
+            return next();
         }else{
             req.flash("error", "Can't find profile, or profile is not yours.")
 	        return res.redirect("/")

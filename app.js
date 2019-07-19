@@ -5,6 +5,11 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
 
+/**************Method-Override***************/
+const methodOverride = require('method-override');
+app.use(methodOverride("_method"));
+
+
 /**************BodyParser***************/
 const bodyparser = require("body-parser");
 app.use(bodyparser.urlencoded({extended: true}));

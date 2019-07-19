@@ -25,6 +25,26 @@ var uploadPicture = multer({
 // 	});
 // });
 
+router.get('/users/:id/edit', middleware.loggedIn, middleware.isUser, (req,res) =>{
+	user.findById(req.params.id, function(err, foundUser){
+	   if(err){
+			req.flash("error", "Can't find profile, or profile is not yours.")
+			return res.redirect("/")
+	   }
+	   res.render('users/edit', {user: foundUser});
+	});
+});
+
+router.put('/users/:id', middleware.loggedIn, middleware.isUser, (req,res) =>{
+	user.findByIdAndUpdate(req.params.id, req.body.user, function(err, updatedUser){
+		if(err){
+			req.flash("error", err);
+			return res.redirect("/users/"+req.params.id);
+		}
+		res.redirect("/users/"+req.params.id);
+	});
+});
+
 router.get('/users/:id', middleware.loggedIn, middleware.isUser, (req,res) =>{
 	user.findById(req.params.id, function(err, foundUser){
 	   if(err){

@@ -1,37 +1,35 @@
 .usernameH1{
-    padding-top: 3em;
     padding-bottom: 0;
     text-align: center;
 }
 
 .editButton{
     font-size: 2em;
-    margin-top: 2em;
+    margin-top: 0em;
     margin-bottom: 2em;
 }
 
-.uploadButton{
-    font-size: 1em;
-}
-
-.uploadText{
-    text-align: center;
-}
-
-.editPopUp{
-    padding: 1em;
-    border-radius: 10px;
-    display: none;
-    position: absolute;
-    top: 25%;
-    left: 45%;
-    z-index: 5;
-    background: #EEEFEF;
-    height: 20em;
-    width: 15em;
+.profileBody{
+    padding-top: 5em;
 }
 
 .profileInfo{
-    padding-top: 11em;
+    padding-top: 6em;
     color:#EEEFEF;
+}
+
+.labels{
+    margin-bottom: 3em;
+}
+
+@media screen and (max-width: 1024px) {
+    .labels{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .editButton{
+        margin-top: 2em;
+    }
 }

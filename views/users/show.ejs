@@ -1,45 +1,45 @@
 <% include ../partials/header %>
-<div class="editPopUp">
-    <form class="editMenu">
-        <div class="form-group">
-            <span><strong>Add a link to an image</strong></span>
-        </div>
-        <div class="form-group">
-            <input class="form-control" type="text" name="avatarEdit" placeholder="Link here">
-        </div>
-        <div class="form-group">
-            <span>OR</span>
-        </div>
-        <div class="form-group">
-            <span class="uploadText"><strong>Upload your own image</strong></span>
-        </div>
-        <div class="form-group">
-            <input type="file" style="" id="file" name="file"/>
-        </div>
-        <div class="form-group">
-            <button class="submitButton btn btn-lg btn-primary btn-block">Submit!</button>
-        </div>
-    </form>
-</div>
 <div class="row profileBody">
     <span class="col-sm-1 d-none d-sm-block d-lg-none"></span>
     <div class="col-sm-10 col-lg-4">
         <h1 class="usernameH1"> <%= user.username.charAt(0).toUpperCase() + user.username.slice(1)%> </h1>
         <figure class="userImage">
             <img src="<%= user.avatar%>" alt='user profile image'>
-        </figure>   
+        </figure>
     </div>
-    <span class="col-sm-1 d-none d-sm-block d-lg-none"></span>
-    <div class="col-sm-12 col-lg-8 profileInfo">
-        <h2>First Name:</h2>
-        <h2>Last Name:</h2>
-        <h2>Email:</h2>
+    <div class="col-sm-12 col-lg-6 profileInfo">
+        <h2 class="labels">First Name:
+            <% if(user.firstName !== ""){%>
+                <%= user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)%>
+            <% }else{ %>
+                Not Provided
+            <% } %>
+        </h2>
+        <h2 class="labels">Last Name:
+            <% if(user.lastName !== ""){%>
+                <%= user.lastName.charAt(0).toUpperCase() + user.lastName.slice(1)%>
+            <% }else{ %>
+                Not Provided
+            <% } %>
+        </h2>
+        <h2 class="labels">Email:
+        <% if(user.email !== ""){%>
+                <%= user.email %>
+            <% }else{ %>
+                Not Provided
+            <% } %>
+        </h2>
     </div>
-    <span class="col-sm-1"></span>
-    <div class="col-sm-10">
-        <button class="editButton btn btn-lg btn-primary btn-block">Edit profile</button>
+    <!--<span class="col-sm-1 d-none d-sm-block d-lg-none"></span>-->
+    <div class="row">
+        <span class="col-sm-1 col-lg-3"></span>
+        <div class="col-sm-10 col-lg-6">
+            <form action="/users/<%= user.id %>/edit" method="get">
+                <button class="editButton btn btn-lg btn-primary btn-block">Edit profile</button>
+            </form>
+        </div>
+        <!--<span class="col-sm-1"></span>-->
     </div>
-    <span class="col-sm-1"></span>
 </div>
-<script type="text/javascript" src="/scripts/editPopup.js"></script>
+<!--<script type="text/javascript" src="/scripts/editPopup.js"></script>-->
 <% include ../partials/footer %>
