@@ -137,6 +137,10 @@
 }
 
 .flash{
+    position: absolute;
+    left: 23%;
+    text-align: center;
+    z-index: 5;
     padding-top: 8em;
 }
 
@@ -243,5 +247,11 @@ body{
     
     .jumbotron{
         min-height: 40em;
+    }
+    
+    .flash{
+        font-size: 1.5em;
+        padding-top: 5.5em;
+        left: 13%;
     }
 }
