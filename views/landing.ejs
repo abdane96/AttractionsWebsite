@@ -5,16 +5,20 @@
 	    	<h2 class="display-4">All your camping needs, and more!</h2>
 	    	<% if(!currentUser){ %>
 	    	<p class="lead">Look no further, register below and let us take care of things!</p>
-    		<a type="button" href="/register" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Join today!</a>
+    		<a type="button" href="/register" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Get a membership!</a>
     		<% } else{%>
     		<p class="lead">You've come to the right place!</p>
     		<% } %>
+    		
 		</div>
+	</div>
+	<div class="weather">
+		<h2> Current Weather:</h2>
 	</div>
 
 	<div id="top-div" class="sections">
 		<div class="row">
-			<h1 class="col-sm-12">Activities</h1>
+			<h1 class="col-sm-12 landingH1">Activities</h1>
 			<span class="col-md-1"></span>
 			<span id="left-span" class="col-md-1 d-none d-lg-block"><button id="left-arrow" class="btn btn-success btn-block" onclick="plusSlides(-1)">&#10094;</button></span>
 			<div class="col-lg-8 col-sm-12 outer">				
@@ -45,7 +49,7 @@
 		</div>		
 	</div>
 	<div id="second-div" class="sections">
-		<h1 class="col-sm-12">Nearby Camps</h1>
+		<h1 class="col-sm-12 landingH1">Nearby Camps</h1>
 		<div class="row">
 			<span class="col-md-1"></span>
 			<div id="map" class="col-md-10"></div>
@@ -55,7 +59,7 @@
 		<div class="row">
 			<span class="col-lg-2"></span>
 			<div class="col-sm-12 col-lg-8">
-				<h1>Shop</h1>
+				<h1 class="landingH1">Shop</h1>
 				<img class="img-fluid shadow-img" src="/images/shop.jpg">
 			</div>
 		</div>
@@ -64,7 +68,7 @@
 		<div class="row">
 			<span class="col-lg-2"></span>
 			<div class="col-sm-12 col-lg-8">
-				<h1>Latest News</h1>
+				<h1 class="landingH1">Latest News</h1>
 				<img class="img-fluid shadow-img" src="/images/news.jpg">
 			</div>
 		</div>

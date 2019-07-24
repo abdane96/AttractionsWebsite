@@ -1,6 +1,5 @@
 #top-div {
     box-shadow: 0 -1.5em 1em -1em #222;
-    width: 100%;
     background: #AB3F05;
     text-align: center;
     height: auto;
@@ -11,7 +10,6 @@
 
 #second-div{
     box-shadow: 0 -1.5em 1em -1em #222;
-    width: 100%;
     background: #6A1E82;
     text-align: center;
     padding-bottom: 6em;
@@ -20,7 +18,6 @@
 
 #third-div{
     box-shadow: 0 -1.5em 1em -1em #222;
-    width: 100%;
     background: #CC9500;
     text-align: center;
     padding-bottom: 6em;
@@ -29,7 +26,6 @@
 
 #last-div{
     box-shadow: 0 -1.5em 1em -1em #222;
-    width: 100%;    
     background: #1D93FE;
     text-align: center;
     padding-bottom: 6em;
@@ -111,14 +107,24 @@
     box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
+.weather{
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    background: #FCEFDF;
+    height: 50%;
+    width: 15%;
+    opacity: 0.8;
+}
+
 .logout-btn{
     border: none;
     background: none;
 }
 
 .MainLogo{
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
 }
 
 .jumboButton{
@@ -145,13 +151,27 @@
 }
 
 .navbar-custom{
-    color: #eeefef;
+    color: #EEEFEF;
     background-color: #333;
 }
 
+.fixed-top{
+    animation: navbarAnimation 0.5s ease-in-out;
+}
+
+@keyframes navbarAnimation {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
 .navbar {
-    margin-bottom: 0;
+    margin-bottom: 0em;
     box-shadow: 0 2em 1em -1em #222;
+    padding-top: 0.1em;
 }
 
 .fa-sign-in, .fa-sign-out, .fa-user-plus, .fa-user-circle, .fa-free-code-camp{
@@ -161,7 +181,7 @@
 .jumbotron{
     background-image: url("/images/Jumbotron.jpg");
     background-size: 100% 100%;
-    padding-top: 13em;
+    padding-top: 5em;
     padding-bottom: 10em;
     margin-bottom: 0em;
     background-color: #FFF;
@@ -175,10 +195,6 @@
     margin-right: 0;
     width: 100%;
     height: auto;
-}
-
-.images{
-    position: relative;
 }
 
 .captions{
@@ -217,7 +233,7 @@ figure img{
     max-width: 100%;
 }
 
-h1{
+.landingH1{
     color: #eeefef;
     padding: 1em;
 }
@@ -238,7 +254,7 @@ body{
     }
     
     #add-h1{
-        font-size: 2em;
+        font-size: 1.2em;
     }
     
     .navbar-toggler-icon{
@@ -253,5 +269,28 @@ body{
         font-size: 1.5em;
         padding-top: 5.5em;
         left: 13%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .collapse{
+        height: 90px;
+    }
+    
+    .navbar-nav{
+        height:100%;
+        text-align: center;
+        line-height: 80px;
+    }
+    
+    .nav-link{
+        margin-left: 1.2em;
+        border-radius: 5px;
+    }
+    
+    .nav-link:hover{
+        background: #AAA;
+        transition: 0.5s;
     }
 }

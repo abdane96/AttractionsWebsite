@@ -22,4 +22,12 @@ router.get('/contact', (req,res) =>{
 	res.render('contact');
 });
 
+router.get('/about', (req,res) =>{
+	res.render('about');
+});
+
+router.get('/membership', (req,res) =>{
+	res.render('membership');
+});
+
 module.exports = router;

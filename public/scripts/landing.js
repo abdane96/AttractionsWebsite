@@ -7,7 +7,7 @@ setTimeout(function(){
 /****************SlideShow***************/
 var slideIndex = 1;
 var myTimer;
-var H1text;
+//var H1text;
 
 slideShow(slideIndex);
 
@@ -110,7 +110,6 @@ function plusSlides(n){
 }
 
 function slideShow(n){
-	var i;
 	var slides = $(".images");
 	var dots = $(".dot");
 
@@ -163,25 +162,36 @@ function changeNavBarColor(){
 	$(document).ready(function(){
 		$(window).scroll(function (event) {
 			var currentPosition = $(window).scrollTop();
+			var navBarHeight = $(".navbar").height();
+			
+			//Make navbar fixed after scrolling its height
+			if(currentPosition > navBarHeight){
+				$(".navbar").addClass("fixed-top");
+			}else{
+				$(".navbar").removeClass("fixed-top");
+			}
+			
+			//Change navbar colors
 			sections.forEach(function(element, index){
 				if(index < sections.length-1){
-					if(currentPosition >= element.top && currentPosition < sections[index+1].top){
-						H1text = element.H1;
-						fixH1(H1text);
-						$('.navbar').css('background-color', element.color);		
-						$(window).resize(function(){
-							fixH1(H1text);
-						});				
+					if(currentPosition >= element.top-navBarHeight && currentPosition < sections[index+1].top+navBarHeight){
+						//H1text = element.H1;
+						//fixH1(H1text);
+						$('.navbar').css('background-color', element.color);
+						// $(window).resize(function(){
+						// 	fixH1(H1text);
+						// });				
 					}
 				}else{
 					//on the last div
-					if(currentPosition > element.top){
-						H1text = element.H1;
-						fixH1(H1text);
+					if(currentPosition > element.top-navBarHeight){
+						//H1text = element.H1;
+						//fixH1(H1text);
 						$('.navbar').css('background-color', element.color);
-						$(window).resize(function(){
-							fixH1(H1text);
-						});
+						
+						// $(window).resize(function(){
+						// 	fixH1(H1text);
+						// });
 					}
 				}				
 			});
@@ -189,16 +199,16 @@ function changeNavBarColor(){
 	});
 }
 
-function fixH1(text){
-	$('#add-h1').replaceWith('<span id="add-h1">' + text + '</span>');
-	if($(window).width() > 980){
-		$('#add-h1').css({
-			'position': 'absolute',
-			'top': '0',
-			'left': '0',
-			'z-index': '1'
-		});
-		var textSize = $("#add-h1").width();
-		$("#add-h1").css('margin-left', ($(".navbar").width()/2.1)-textSize/100);
-	}
-}
+// function fixH1(text){
+// 	$('#add-h1').replaceWith('<span id="add-h1">' + text + '</span>');
+// 	if($(window).width() > 980){
+// 		$('#add-h1').css({
+// 			'position': 'absolute',
+// 			'top': '0',
+// 			'left': '0',
+// 			'z-index': '1'
+// 		});
+// 		var textSize = $("#add-h1").width();
+// 		$("#add-h1").css('margin-left', ($(".navbar").width()/2.1)-textSize/100);
+// 	}
+// }
