@@ -19,25 +19,27 @@ var transporter = nodemailer.createTransport({
 /**************Request***************/
 const request = require('request');
 let apiKey = 'd7023e77f68d759c6b3dba622e3283f6';
-let city = 'portland';
-let url = 'http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}';
-request(url, function (err, response, body) {
-  if(err){
-    console.log('error:', err);
-  } else {
-    console.log('body:', body);
-  }
-});
 
 router.get('/', (req,res) =>{
 	const ipInfo = req.ipInfo;
-	var message = `Hey, you are browsing from ${ipInfo.city}, ${ipInfo.country}`;
-	console.log(message);
-	res.render('landing');
+	let url = `http://api.openweathermap.org/data/2.5/weather?q=${ipInfo.city}&units=metric&appid=${apiKey}`;
+	request(url, function (err, response, body) {
+  	if(err){
+  		req.flash('error', err);
+  		res.render('landing');
+	  } else {
+	  	let weather = JSON.parse(body);
+	    res.render('landing', {weather: weather});
+	  }
+	});
+	
 });
 
 router.get('/about', (req,res) =>{
 	res.render('about');
+});
+router.get('/shop', (req,res) =>{
+	res.render('shop');
 });
 
 router.get('/indoor', (req,res) =>{

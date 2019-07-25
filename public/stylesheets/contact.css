@@ -51,7 +51,7 @@
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+.contact-button {
     background-color: #866EDF;
     color: white;
     padding: 12px 20px;
@@ -61,7 +61,8 @@ input[type=submit] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+.contact-button:hover {
+    transition: 0.3s;
     background-color: #5F5192;
 }
 

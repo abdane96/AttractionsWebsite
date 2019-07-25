@@ -5,7 +5,7 @@
 	    	<h2 class="display-4">All your camping needs, and more!</h2>
 	    	<% if(!currentUser){ %>
 	    	<p class="lead">Look no further, register below and let us take care of things!</p>
-    		<a type="button" href="/register" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Get a membership!</a>
+    		<a type="button" href="/membership" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Get a membership!</a>
     		<% } else{%>
     		<p class="lead">You've come to the right place!</p>
     		<% } %>
@@ -14,6 +14,20 @@
 	</div>
 	<div class="weather">
 		<h2> Current Weather</h2>
+		<p>
+			It is <%=Math.round(weather.main.temp)%> degrees in <%= weather.name%>!
+			<% if(weather.main.temp >= 20){%>
+				<br>
+				Perfect weather for our Summer, Fall and Spring activities!
+			<% } else if(weather.main.temp >= 10) { %>
+				<br>
+				Perfect weather for our Fall and Spring activities!
+			<% } else{ %>
+				<br>
+				Perfect weather for our Winter activities!
+			<% } %>
+				
+		</p>
 	</div>
 
 	<div id="top-div" class="sections">
