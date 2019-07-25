@@ -1,7 +1,7 @@
 /****************NavBar*****************/
-setTimeout(function(){
-	changeNavBarColor();
-}, 1000);
+// setTimeout(function(){
+// 	changeNavBarColor();
+// }, 1000);
 
 
 /****************SlideShow***************/

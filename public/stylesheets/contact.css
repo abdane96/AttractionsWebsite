@@ -1,0 +1,80 @@
+.contactJumbo{
+    background-image: url("/images/about-us.jpeg");
+    background-size: 100% 100%;
+    min-width: 100%;
+    background-attachment: fixed;
+    height: 90vh;
+    margin:0;
+}
+
+.contact-paragraph{
+    padding-top: 1em;
+    color: #EEEFEF;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 1024px){
+    .contact-paragraph{
+        font-size: 2em;
+    }
+    
+    .contact-form{
+        font-size: 2em;
+    }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.contact-input, .contact-select, .contact-textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    background: #666160;
+    color: #EEEFEF;
+}
+
+.contact-label{
+    color: #F2F2F2;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #866EDF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #5F5192;
+}
+
+/* Add a background color and some padding around the form */
+.contact-form {
+    border-radius: 5px;
+    background-color: #2f2f2f;
+    padding: 20px;
+    box-shadow: 0 -1.5em 1em -1em #222;
+}
+
+
+/*Change placeholder text color*/
+
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #D0C7C6; 
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #D0C7C6; 
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #D0C7C6; 
+}

@@ -1,3 +1,55 @@
 <% include partials/header %>
-
+    <div class="jumbotron jumbotron-fluid contactJumbo">
+		<div class="container">
+	    	<h1 class="display-1 " style="text-align: center"> Contact Us</h1>
+		</div>
+    		<div class="row">
+    		    <div class="col-sm-1 col-lg-2"></div>
+    		    <div class="col-sm-10 col-lg-8">
+    		        <p class="contact-paragraph text-center">
+    		            <br>
+                        <strong>Give us a call, our manager did not give us a break to book an activity yet :)</strong>
+                        <br>
+                        <br>
+                    	Don not hesitate to contact us through our email or customer service number 
+                    	provided below if you feel like you want to know more about our services or 
+                    	have questions in general. Also, you can write your message in the box 
+                    	provided below and send it to us after the required fields are filled and one 
+                    	of our agents will contact you back as soon as possible.
+                    	<br>
+                    	<br>
+                        Email: dumdum@gmail.com
+                        <br>
+                        Customer service number: +1 (123) 456-789
+                    </p>
+    		    </div>
+    		</div>
+	</div>
+	<div class="row contact-form">
+	    <div class="col-lg-2"></div>
+	    <div class=" col-lg-8">
+            <form action="/contact" method="post">
+            
+                <label class= "contact-label" for="fname">First Name</label>
+                <input class="contact-input" type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                <label class= "contact-label" for="lname">Last Name</label>
+                <input class="contact-input" type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                <label class= "contact-label" for="country">Country</label>
+                <select class="contact-select" id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                
+                <label class= "contact-label" for="message">Message</label>
+                <textarea class="contact-textarea" id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                
+                <input class="contact-button" type="submit" value="Submit">
+            
+            </form>
+        </div>
+	</div>
+	
 <% include partials/footer %>
