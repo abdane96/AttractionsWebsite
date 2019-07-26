@@ -7,6 +7,11 @@ router.get('/register', (req,res) =>{
 	res.render('register');
 });
 
+router.get('/robots.txt', (req,res)=>{
+	res.type('text/plain');
+    res.send("User-agent: *\nDisallow: ");
+})
+
 router.post('/register', (req,res) =>{
 	user.register(
 		new user({
