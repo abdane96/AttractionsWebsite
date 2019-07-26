@@ -1,14 +1,21 @@
-#top-div {
+#weather-div{
+    box-shadow: 0 -1.5em 1em -1em #222;
+    background: #6FD06F;
+    text-align: center;
+    padding-bottom: 6em;
+    position: relative;
+}
+
+#activities-div {
     box-shadow: 0 -1.5em 1em -1em #222;
     background: #AB3F05;
     text-align: center;
-    height: auto;
     padding-bottom: 6em;
     position: relative;
 }
 
 
-#second-div{
+#nearby-camps-div{
     box-shadow: 0 -1.5em 1em -1em #222;
     background: #6A1E82;
     text-align: center;
@@ -16,7 +23,7 @@
     position: relative;
 }
 
-#third-div{
+#shop-div{
     box-shadow: 0 -1.5em 1em -1em #222;
     background: #CC9500;
     text-align: center;
@@ -24,7 +31,7 @@
     position: relative;
 }
 
-#last-div{
+#news-div{
     box-shadow: 0 -1.5em 1em -1em #222;
     background: #1D93FE;
     text-align: center;
@@ -107,15 +114,8 @@
     box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
-.weather{
-    position: absolute;
-    top: 20%;
-    left: 80%;
-    background: #FCEFDF;
-    height: 50%;
-    width: 15%;
-    opacity: 0.8;
-    text-align: center;
+.weather-info{
+    font-size: 2em;
 }
 
 .logout-btn{
@@ -154,6 +154,7 @@
 .navbar-custom{
     color: #EEEFEF;
     background-color: #333;
+    transition: background-color 300ms linear;
 }
 
 .fixed-top{
@@ -236,6 +237,7 @@ figure img{
 
 .landingH1{
     color: #eeefef;
+    font-size: 4em;
     padding: 1em;
 }
 

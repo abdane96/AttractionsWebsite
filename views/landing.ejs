@@ -12,10 +12,10 @@
     		
 		</div>
 	</div>
-	<div class="weather">
-		<h2> Current Weather</h2>
-		<p>
-			It is <%=Math.round(weather.main.temp)%> degrees in <%= weather.name%>!
+	<div id="weather-div" class="sections">
+		<h1 class="col-sm-12 landingH1">Weather in <%= weather.name%></h1>
+		<p class="weather-info">
+			It is <%=Math.round(weather.main.temp)%> degrees and <%= weather.weather[0].description %>!
 			<% if(weather.main.temp >= 20){%>
 				<br>
 				Perfect weather for our Summer, Fall and Spring activities!
@@ -30,7 +30,7 @@
 		</p>
 	</div>
 
-	<div id="top-div" class="sections">
+	<div id="activities-div" class="sections">
 		<div class="row">
 			<h1 class="col-sm-12 landingH1">Activities</h1>
 			<span class="col-md-1"></span>
@@ -62,23 +62,23 @@
 			<span class="col-sm-2"></span>
 		</div>		
 	</div>
-	<div id="second-div" class="sections">
+	<div id="nearby-camps-div" class="sections">
 		<h1 class="col-sm-12 landingH1">Nearby Camps</h1>
 		<div class="row">
 			<span class="col-md-1"></span>
 			<div id="map" class="col-md-10"></div>
 		</div>
 	</div>
-	<div id="third-div" class="sections">
+	<div id="shop-div" class="sections">
 		<div class="row">
 			<span class="col-lg-2"></span>
 			<div class="col-sm-12 col-lg-8">
 				<h1 class="landingH1">Shop</h1>
-				<img class="img-fluid shadow-img" src="/images/shop.jpg">
+				<a href="/shop"><img class="img-fluid shadow-img" src="/images/shop.jpg"></a>
 			</div>
 		</div>
 	</div>
-	<div id="last-div" class="sections">
+	<div id="news-div" class="sections">
 		<div class="row">
 			<span class="col-lg-2"></span>
 			<div class="col-sm-12 col-lg-8">

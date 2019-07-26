@@ -18,8 +18,10 @@
     padding-top: 0em;
     padding-left: 7em;
     padding-right: 7em;
+    padding-bottom: 1em;
     font-size: 1.2em;
-    background: rgba(180, 180, 180, 0.5);
+    background: rgba(180, 180, 180, 0.3);
+    border-radius: 300px;
 }
 
 @media screen and (max-width: 1024px){

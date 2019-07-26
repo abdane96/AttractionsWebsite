@@ -62,7 +62,6 @@ function changeNavBarColor(){
 						//H1text = element.H1;
 						//fixH1(H1text);
 						$('.navbar').css('background-color', element.color);
-						
 						// $(window).resize(function(){
 						// 	fixH1(H1text);
 						// });
