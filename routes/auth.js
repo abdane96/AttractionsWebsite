@@ -2,20 +2,21 @@ var express = require("express");
 var router = express.Router();
 var user = require("../models/user");
 var passport = require("passport");
+var middleware = require("../middleware/index")
 
 router.get('/register', (req,res) =>{
 	res.render('register');
 });
 
-router.get('/robots.txt', (req,res)=>{
-	res.type('text/plain');
-    res.send("User-agent: Browsershots\nDisallow: ");
-})
+// router.get('/robots.txt', (req,res)=>{
+// 	res.type('text/plain');
+//     res.send("User-agent: Browsershots\nDisallow: ");
+// })
 
 router.post('/register', (req,res) =>{
 	user.register(
 		new user({
-			username: req.body.username,
+			username: req.body.username.toLowerCase(),
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
 			email: req.body.email,
@@ -39,7 +40,7 @@ router.get('/login', (req,res) =>{
 	res.render('login');
 });
 
-router.post('/login', passport.authenticate("local",{
+router.post('/login', middleware.userToLowercase, passport.authenticate("local",{
 	successRedirect: "/",
 	failureRedirect: "/login",
 	failureFlash: true,
