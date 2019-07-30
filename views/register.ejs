@@ -3,33 +3,36 @@
     <div class="row">
         <h1 class="col-sm-12 login-signup-h1">Create Profile</h1>
         <div class="container">
-            <p class="col-sm-12 signup-text">If you sign up with Rahal, you will have an account and a record of
+            <p class="col-sm-12 signup-text">When you sign up with Rahal, you will have an account and a record of
         the places you visited and earn points as per activity. Outdoors has 100
         points per activity and indoors 50 points.</p>
         </div>
     </div>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <div class="row">
         <span class="col-lg-4 col-sm-1"></span>
         <div class="col-lg-4 col-sm-10">
             <form action="/register" method="post">
+                <div class="form-group">
+                    <div id="gSignInWrapper">
+                        <div id="googleBtn" class="customGPlusSignIn">
+                            <span><img class="googleIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"></span>
+                            <span class="googleButtonText">Sign Up with Google</span>
+                        </div>
+                    </div>
+                    <div id="googleName"></div>
+                </div>
+                <div class="form-group">
+                    <hr class="hr1"><span class="social-or-create-text"> OR Create a new user!</span><hr class="hr2">
+                </div>
+                
                 <div class="form-group">
                     <input class="form-control" type="text" name="username" placeholder="username">
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="password" name="password" placeholder="password">
                 </div>
-            	<div class="form-group">
-                    <input class="form-control" type="text" name="firstName" placeholder="first name (optional)">
-                </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="lastName" placeholder="last name (optional)">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="email (optional)">
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="avatar" placeholder="avatar url (optional)">
+                    <input class="form-control" type="email" name="email" placeholder="email">
                 </div>
                 <div class="form-group">
                     <button class="login-signup-button btn btn-lg btn-primary btn-block">Sign Up!</button>

@@ -1,6 +1,7 @@
 .form-control{
-    padding-bottom:1.5em;
-    padding-top:1.5em;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+    border-radius: 2em;
 }
 
 .login-signup-h1{
@@ -11,6 +12,47 @@
     color: #EEEFEF;
 }
 
+.hr1{
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #0222EE;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.hr1:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #0222EE;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+
+.hr2{
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #0222EE;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+.hr2:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #0222EE;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
 .signup-text{
     color: #d7d1c9;
     text-align: center;
@@ -18,19 +60,71 @@
     padding-bottom: 1em;
 }
 
+.social-or-create-text{
+    font-size: 1.3em;
+    color: #EEEFEF;
+    text-align: center;
+}
+
+/*Google Button*/
+
+.googleIcon{
+    width: 2em;
+}
+
+#googleBtn {
+    background: white;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    text-align: center;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+#googleBtn:hover {
+    cursor: pointer;
+}
+
+.googleButtonText {
+    vertical-align: middle;
+    font-size: 1.3em;
+    color: black;
+}
+
 @media screen and (max-width: 1024px) {
     .form-group{
         padding-top: 2em;
     }
     
+    .signup-text{
+        font-size: 2.5em;
+    }
+    
+    .social-or-create-text{
+        font-size: 2.5em;
+    }
+    
+    .login-signup-h1{
+        font-size: 5em;
+    }
+    
     .form-control{
         padding-bottom:1.5em;
         padding-top:1.5em;
-        font-size: 2em;
+        font-size: 2.5em;
     }
     
     .login-signup-button{
         font-size: 3em;
+    }
+    
+    #googleBtn{
+        font-size: 2.5em;
+    }
+    
+    .googleIcon{
+        width: 2em;
     }
 }
 
