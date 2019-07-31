@@ -13,10 +13,8 @@
 }
 
 .paragraph-div{
-    padding: 0 7em 1em 7em;
-    font-size: 1.2em;
-    background: rgba(180, 180, 180, 0.3);
-    border-radius: 300px;
+    margin-bottom: 10em;
+    font-size: 1em;
 }
 
 @media screen and (max-width: 1024px){
