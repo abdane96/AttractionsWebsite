@@ -40,7 +40,7 @@ router.get('/login', (req,res) =>{
 	res.render('login');
 });
 
-router.post('/login', middleware.userToLowercase ,passport.authenticate("local",{
+router.post('/login', middleware.userToLowercase, passport.authenticate("local",{
 	successRedirect: "/",
 	failureRedirect: "/login",
 	failureFlash: true,
