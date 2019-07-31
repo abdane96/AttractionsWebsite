@@ -114,11 +114,6 @@
     box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
-.dropdown{
-    background: #333;
-    transition: background-color 300ms linear;
-}
-
 .nav-link{
     margin-left: 1.2em;
     border-radius: 5px;
@@ -128,27 +123,6 @@
 .nav-link:hover{
     background: #AAA;
     transition: 0.5s;
-}
-
-
-.all-dropdown-content{
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  animation: dropdownAnimation 0.2s linear;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-@keyframes dropdownAnimation {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 45vh;
-    }
 }
 
 .all-dropdown-info{
@@ -162,6 +136,7 @@
     max-height: 2em;
     transition: opacity 4s;
     animation: dropdownAnimationText 0.7s linear;
+    line-height: 2em;
 }
 
 @keyframes dropdownAnimationText {
@@ -190,43 +165,48 @@
     color: #AAA;
 }
 
-.support{
+.seasons-dropdown-content{
     display: none;
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    animation: dropdownAnimationSupport 0.2s linear;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    background: #333;
 }
 
-.support a{
-    font-size: 0.7em;
+.support-dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #333;
 }
 
-@keyframes dropdownAnimationSupport {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 10vh;
-    }
-}
-
-#dropdown-header{
+#seasons-dropdown-header{
     font-size: 1em;
     color: white;
-    margin-bottom: 0.3em;
+    margin-bottom: 1.5em;
 }
 
-#dropdown-header img{
+#support-dropdown-header{
+    font-size: 0.7em;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#seasons-dropdown-header img{
     margin-left: 0.5em;
 }
 
 .all-dropdown:hover .all-dropdown-content {
-  display: block;
-  padding-bottom: 2em;
+    display: block;
+    padding-bottom: 2em;
 }
 
 .main-jumbo-header{
@@ -365,7 +345,7 @@ body{
     background: #333333;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
     
     .weather{
         top: 20%;
@@ -401,7 +381,7 @@ body{
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 993px) {
 
     .collapse{
         height: 90px;

@@ -11,9 +11,30 @@ function checkFooterPosition(){
 
 /****************NavBar***************/
 
-setTimeout(function(){
+//setTimeout(function(){
 	changeNavBarColor();
-}, 1000);
+//}, 1000);
+
+animateHoverNavBar()
+
+
+
+
+function animateHoverNavBar(){
+	$(".all-dropdown:has(div.seasons-dropdown-content)").hover(function(){
+		$(".seasons-dropdown-content").slideDown();
+	}, function(){
+		$(".seasons-dropdown-content").slideUp(200);
+	});
+	
+	$(".all-dropdown:has(div.support-dropdown-content)").hover(function(){
+		$(".support-dropdown-content").slideDown();
+	}, function(){
+		$(".support-dropdown-content").slideUp(200);
+	});
+}
+
+
 
 function changeNavBarColor(){
 
@@ -39,37 +60,37 @@ function changeNavBarColor(){
 			var navBarHeight = $(".navbar").height();
 			
 			//Make navbar fixed after scrolling its height
-			if(currentPosition > navBarHeight){
+			if(currentPosition > navBarHeight-10){
 				$(".navbar").addClass("fixed-top");
 			}else{
 				$(".navbar").removeClass("fixed-top");
 			}
 			
 			//Change navbar colors
-			sections.forEach(function(element, index){
-				if(index < sections.length-1){
-					if(currentPosition >= element.top-navBarHeight && currentPosition < sections[index+1].top+navBarHeight){
-						//H1text = element.H1;
-						//fixH1(H1text);
-						// $('.navbar').css('background-color', element.color);
-						// $('.dropdown').css('background-color', element.color);
-						// $(window).resize(function(){
-						// 	fixH1(H1text);
-						// });				
-					}
-				}else{
-					//on the last div
-					if(currentPosition > element.top-navBarHeight){
-						//H1text = element.H1;
-						//fixH1(H1text);
-						// $('.navbar').css('background-color', element.color);
-						// $('.dropdown').css('background-color', element.color);
-						// $(window).resize(function(){
-						// 	fixH1(H1text);
-						// });
-					}
-				}				
-			});
+			// sections.forEach(function(element, index){
+			// 	if(index < sections.length-1){
+			// 		if(currentPosition >= element.top-navBarHeight && currentPosition < sections[index+1].top+navBarHeight){
+			// 			//H1text = element.H1;
+			// 			//fixH1(H1text);
+			// 			// $('.navbar').css('background-color', element.color);
+			// 			// $('.dropdown').css('background-color', element.color);
+			// 			// $(window).resize(function(){
+			// 			// 	fixH1(H1text);
+			// 			// });				
+			// 		}
+			// 	}else{
+			// 		//on the last div
+			// 		if(currentPosition > element.top-navBarHeight){
+			// 			//H1text = element.H1;
+			// 			//fixH1(H1text);
+			// 			// $('.navbar').css('background-color', element.color);
+			// 			// $('.dropdown').css('background-color', element.color);
+			// 			// $(window).resize(function(){
+			// 			// 	fixH1(H1text);
+			// 			// });
+			// 		}
+			// 	}				
+			// });
 		});
 	});
 }
