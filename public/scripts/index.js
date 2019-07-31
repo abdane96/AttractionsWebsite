@@ -60,7 +60,7 @@ function changeNavBarColor(){
 			var navBarHeight = $(".navbar").height();
 			
 			//Make navbar fixed after scrolling its height
-			if(currentPosition > navBarHeight-10){
+			if(currentPosition > navBarHeight+20){
 				$(".navbar").addClass("fixed-top");
 			}else{
 				$(".navbar").removeClass("fixed-top");

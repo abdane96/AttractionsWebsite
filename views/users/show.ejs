@@ -3,8 +3,8 @@
     <span class="col-sm-1 d-none d-sm-block d-lg-none"></span>
     <div class="col-sm-10 col-lg-4">
         <h1 class="usernameH1"> <%= user.username.charAt(0).toUpperCase() + user.username.slice(1)%> </h1>
-        <figure class="userImage">
-            <img src="<%= user.avatar%>" alt='user profile image'>
+        <figure>
+            <img class="userImage" src="<%=user.avatar%>" alt='user profile image'>
         </figure>
     </div>
     <div class="col-sm-12 col-lg-6 profileInfo">

@@ -19,7 +19,7 @@ router.post('/register', (req,res) =>{
 			username: req.body.username.toLowerCase(),
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
-			email: req.body.email,
+			email: req.body.email.toLowerCase(),
 			avatar: req.body.avatar
 		}),
 		req.body.password,
@@ -40,7 +40,7 @@ router.get('/login', (req,res) =>{
 	res.render('login');
 });
 
-router.post('/login', middleware.userToLowercase, passport.authenticate("local",{
+router.post('/login', middleware.userToLowercase ,passport.authenticate("local",{
 	successRedirect: "/",
 	failureRedirect: "/login",
 	failureFlash: true,
