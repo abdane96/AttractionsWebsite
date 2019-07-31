@@ -51,8 +51,8 @@ function changeNavBarColor(){
 					if(currentPosition >= element.top-navBarHeight && currentPosition < sections[index+1].top+navBarHeight){
 						//H1text = element.H1;
 						//fixH1(H1text);
-						$('.navbar').css('background-color', element.color);
-						$('.dropdown').css('background-color', element.color);
+						// $('.navbar').css('background-color', element.color);
+						// $('.dropdown').css('background-color', element.color);
 						// $(window).resize(function(){
 						// 	fixH1(H1text);
 						// });				
@@ -62,8 +62,8 @@ function changeNavBarColor(){
 					if(currentPosition > element.top-navBarHeight){
 						//H1text = element.H1;
 						//fixH1(H1text);
-						$('.navbar').css('background-color', element.color);
-						$('.dropdown').css('background-color', element.color);
+						// $('.navbar').css('background-color', element.color);
+						// $('.dropdown').css('background-color', element.color);
 						// $(window).resize(function(){
 						// 	fixH1(H1text);
 						// });
