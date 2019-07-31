@@ -24,7 +24,15 @@
                 <div class="form-group">
                     <hr class="hr1"><span class="social-or-create-text"> OR Create a new user!</span><hr class="hr2">
                 </div>
-                
+                <% if(error.length > 0){ %>
+            		<div class="container login-signup-flash">
+            			<%if(error && error.length > 0){ %>
+            				<div class="alert alert-danger" role="alert">
+            					<%=error%>
+            				</div>
+            			<% } %>
+            		</div>
+            	<% } %>
                 <div class="form-group">
                     <input class="form-control" type="text" name="username" placeholder="username">
                 </div>

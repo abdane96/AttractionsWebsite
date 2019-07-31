@@ -66,6 +66,10 @@
     text-align: center;
 }
 
+.login-signup-flash{
+    text-align: center;
+}
+
 /*Google Button*/
 
 .googleIcon{
@@ -92,7 +96,7 @@
     color: black;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
     .form-group{
         padding-top: 2em;
     }
@@ -125,6 +129,10 @@
     
     .googleIcon{
         width: 2em;
+    }
+    
+    .login-signup-flash{
+        font-size: 3em;
     }
 }
 

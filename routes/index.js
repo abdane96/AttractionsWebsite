@@ -61,8 +61,8 @@ router.post('/contact', (req,res) =>{
 
 	transporter.sendMail(mailOptions, function(error, info){
 	  if (error) {
-	  	req.flash("error", error);
-			return res.redirect('/contact');
+		req.flash("error", error);
+		return res.redirect('/contact');
 	  }
 	  req.flash("success", "Email sent! We'll reply as soon as possible :)")
 	  res.redirect('/contact');

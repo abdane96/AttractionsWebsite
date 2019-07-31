@@ -242,10 +242,11 @@
 	box-shadow: rgba(40, 161, 22, 0.7) 0 0px 0px 40px inset;
 }
 
-.flash{
+.landing-flash{
     position: absolute;
-    left: 22%;
+    left: 40%;
     text-align: center;
+    width: 20%;
     z-index: 5;
     padding-top: 1em;
 }
@@ -375,9 +376,11 @@ body{
         min-height: 40em;
     }
     
-    .flash{
-        font-size: 1.5em;
-        left: 15%;
+    .landing-flash{
+        padding-top: 0.5em;
+        font-size: 2em;
+        left: 25%;
+        width: 50%;
     }
 }
 
