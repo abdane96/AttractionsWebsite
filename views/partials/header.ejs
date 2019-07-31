@@ -37,23 +37,75 @@
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="/outdoor">Outdoor</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/indoor">Indoor</a>
+					<div class="all-dropdown">
+						<a class="nav-link" href="#">Seasons</a>
+						<div class="seasons dropdown all-dropdown-content">
+							<div class="all-dropdown-links">
+								<div class="all-dropdown-info">
+									<p id="dropdown-header">Spring<img width="40px" src="/images/flower.png"></p>
+									<p><a href="#">Tulip Festival</a></p>
+									<p><a href="#">Paintball</a></p>
+									<p><a href="#">Ziplining</a></p>
+								</div>
+							</div>
+							<div class="all-dropdown-links">
+								<div class="all-dropdown-info">
+									<p id="dropdown-header">Summer<img width="30px" src="/images/sun.png"></p>
+									<p><a href="#">Camping</a></p>
+									<p><a href="#">Swimming</a></p>
+									<p><a href="#">Canoeing</a></p>
+									<p><a href="#">Horseriding</a></p>
+									<p><a href="#">Hot-air Balloons</a></p>
+									<p><a href="#">Golf</a></p>
+									<p><a href="#">Skydiving</a></p>
+								</div>
+							</div>
+							<div class="all-dropdown-links">
+								<div class="all-dropdown-info">
+									<p id="dropdown-header">Fall<img width="40px" src="/images/mapleleaf.png"></p>
+									<p><a href="#">Hiking</a></p>
+									<p><a href="#">Mountain Biking</a></p>
+									<p><a href="#">Skateparks</a></p>
+									<p><a href="#">Parks</a></p>
+								</div>
+							</div>
+							<div class="all-dropdown-links">
+								<div class="all-dropdown-info">
+									<p id="dropdown-header">Winter<img width="25px" src="/images/snowflake.png"></p>
+									<p><a href="#">Skii Resorts</a></p>
+									<p><a href="#">Snow Boarding</a></p>
+									<p><a href="#">Ice Skating</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/shop">Shop</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="/dining">Dining</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="/membership">Membership</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/about">About Us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/contact">Contact Us</a>
-				</li>		
+					<div class="all-dropdown">
+						<a class="nav-link" href="#">Support</a>
+						<div class="dropdown all-dropdown-content support">
+							<div class="all-dropdown-links">
+								<div class="all-dropdown-info">
+									<p id="dropdown-header"><a href="/contact">Contact Us</a></p>
+								</div>
+							</div>
+							<div class="all-dropdown-links">
+								<div class="all-dropdown-info">
+									<p id="dropdown-header"><a href="/about">About Us</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>	
 			</ul>	
 			<ul class="navbar-nav ml-auto">
 				<% if(!currentUser){ %>

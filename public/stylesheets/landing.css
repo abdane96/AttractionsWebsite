@@ -114,6 +114,121 @@
     box-shadow: 2em 0em 1em -1em #222, -2em 0em 1em -1em #222, 0em 2em 1em -1em #222, 0em -2em 1em -1em #222;
 }
 
+.dropdown{
+    background: #333;
+    transition: background-color 300ms linear;
+}
+
+.nav-link{
+    margin-left: 1.2em;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.nav-link:hover{
+    background: #AAA;
+    transition: 0.5s;
+}
+
+
+.all-dropdown-content{
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  animation: dropdownAnimation 0.2s linear;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@keyframes dropdownAnimation {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 45vh;
+    }
+}
+
+.all-dropdown-info{
+    text-align: left;
+}
+
+.all-dropdown-info p{
+    font-size: 0.5em;
+    padding: 0;
+    color: #DAD6D6;
+    max-height: 2em;
+    transition: opacity 4s;
+    animation: dropdownAnimationText 0.7s linear;
+}
+
+@keyframes dropdownAnimationText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.all-dropdown-links{
+    padding-left: 3em;
+    padding-right: 3em;
+    color: white;
+    float: left;
+    font-size: 1.5em;
+}
+
+.all-dropdown-info a{
+    color: #DAD6D6;
+}
+
+.all-dropdown-info a:hover{
+    text-decoration: none;
+    color: #AAA;
+}
+
+.support{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: dropdownAnimationSupport 0.2s linear;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.support a{
+    font-size: 0.7em;
+}
+
+@keyframes dropdownAnimationSupport {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 10vh;
+    }
+}
+
+#dropdown-header{
+    font-size: 1em;
+    color: white;
+    margin-bottom: 0.3em;
+}
+
+#dropdown-header img{
+    margin-left: 0.5em;
+}
+
+.all-dropdown:hover .all-dropdown-content {
+  display: block;
+  padding-bottom: 2em;
+}
+
 .main-jumbo-header{
     margin-bottom: 1.5em;
 }
@@ -226,7 +341,7 @@
 }
 
 .active, .dot:hover {
-    background-color: #28A745
+    background-color: #28A745;
 }
 
 .shadow-img{
@@ -296,15 +411,5 @@ body{
         height:100%;
         text-align: center;
         line-height: 80px;
-    }
-    
-    .nav-link{
-        margin-left: 1.2em;
-        border-radius: 5px;
-    }
-    
-    .nav-link:hover{
-        background: #AAA;
-        transition: 0.5s;
     }
 }

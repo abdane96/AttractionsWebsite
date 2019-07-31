@@ -1,24 +1,20 @@
 .contactJumbo{
-    background-image: url("/images/contact-us.jpeg");
+    background-image: url("/images/contact-us.jpg");
     background-size: 100% 100%;
     min-width: 100%;
     background-attachment: fixed;
-    height: 90vh;
+    height: 100vh;
     margin:0;
+    color: #EEEFEF;
 }
 
 .contact-paragraph{
-    padding-top: 1em;
-    color: #222125;
+    color: #EEEFEF;
     font-size: 1.5em;
 }
 
 .paragraph-div{
-    margin-top: 2em;
-    padding-top: 0em;
-    padding-left: 7em;
-    padding-right: 7em;
-    padding-bottom: 1em;
+    padding: 0 7em 1em 7em;
     font-size: 1.2em;
     background: rgba(180, 180, 180, 0.3);
     border-radius: 300px;

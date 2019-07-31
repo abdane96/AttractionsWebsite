@@ -3,12 +3,10 @@
     background-size: 100% 100%;
     min-width: 100%;
     background-attachment: fixed;
-    height: 90vh;
     margin:0;
 }
 
 .about-paragraph{
-    padding-top: 1em;
     color: #EEEFEF;
     font-size: 1.5em;
 }

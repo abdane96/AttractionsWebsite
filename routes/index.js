@@ -43,11 +43,7 @@ router.get('/shop', (req,res) =>{
 	res.render('shop');
 });
 
-router.get('/indoor', (req,res) =>{
-	res.render('indoor');
-});
-
-router.get('/outdoor', (req,res) =>{
+router.get('/seasons', (req,res) =>{
 	res.render('outdoor');
 });
 
