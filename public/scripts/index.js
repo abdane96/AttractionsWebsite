@@ -21,17 +21,17 @@ animateHoverNavBar()
 
 
 function animateHoverNavBar(){
-	$(".all-dropdown:has(div.seasons-dropdown-content)").hover(function(){
-		$(".seasons-dropdown-content").slideDown();
-	}, function(){
-		$(".seasons-dropdown-content").slideUp(200);
-	});
+	var dropDowns = $('div[class*="-dropdown-content"]');
 	
-	$(".all-dropdown:has(div.support-dropdown-content)").hover(function(){
-		$(".support-dropdown-content").slideDown();
-	}, function(){
-		$(".support-dropdown-content").slideUp(200);
-	});
+	dropDowns.each(function(){
+		var dropdownWord = $(this).attr('class').replace('-dropdown-content', '');
+		
+		$(".all-dropdown:has(div."+dropdownWord+"-dropdown-content)").hover(function(){
+			$("."+dropdownWord+"-dropdown-content").slideDown();
+		}, function(){
+			$("."+dropdownWord+"-dropdown-content").slideUp(200);
+		});
+	})
 }
 
 

@@ -19,6 +19,8 @@
     border-color: #0222EE;
     border-width: 1px 0 0 0;
     border-radius: 20px;
+    padding-left: 0;
+    flex: none;
 }
 
 .hr1:before {
@@ -30,6 +32,8 @@
     border-color: #0222EE;
     border-width: 0 0 1px 0;
     border-radius: 20px;
+    padding-left: 0;
+    flex: none;
 }
 
 
@@ -40,6 +44,8 @@
     border-color: #0222EE;
     border-width: 1px 0 0 0;
     border-radius: 20px;
+    padding-left: 0;
+    flex: none;
 }
 
 .hr2:before {
@@ -51,6 +57,8 @@
     border-color: #0222EE;
     border-width: 0 0 1px 0;
     border-radius: 20px;
+    padding-left: 0;
+    flex: none;
 }
 
 .signup-text{
@@ -64,6 +72,7 @@
     font-size: 1.3em;
     color: #EEEFEF;
     text-align: center;
+    padding-bottom: 1.5em;
 }
 
 .login-signup-flash{
@@ -141,7 +150,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url("/images/contact-us.jpg");
+    background-image: url("/images/mainImage.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 100%;
