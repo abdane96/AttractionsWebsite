@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var user = require("../models/user");
-const expressip = require('express-ip');
+const expressip = require('express-ipinfo');
 router.use(expressip().getIpInfoMiddleware);
 
 /**************Send email***************/
@@ -24,13 +24,13 @@ router.get('/', (req,res) =>{
 	const ipInfo = req.ipInfo;
 	let url = `http://api.openweathermap.org/data/2.5/weather?q=${ipInfo.city}&units=metric&appid=${apiKey}`;
 	request(url, function (err, response, body) {
-  	if(err){
-  		req.flash('error', err);
-  		res.render('landing');
-	  } else {
-	  	let weather = JSON.parse(body);
-	    res.render('landing', {weather: weather});
-	  }
+	  	if(err){
+	  		req.flash('error', err);
+	  		res.render('landing');
+		} else {
+		  	let weather = JSON.parse(body);
+		    res.render('landing', {weather: weather});
+		}
 	});
 	
 });
