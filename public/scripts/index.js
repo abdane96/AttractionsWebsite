@@ -12,13 +12,18 @@ function checkFooterPosition(){
 /****************NavBar***************/
 
 //setTimeout(function(){
-	changeNavBarColor();
+//changeNavBarColor();
 //}, 1000);
 
 animateHoverNavBar()
 
-
-
+// $(window).on('scroll', function () {
+//   // if($(document).scrollTop()){
+// 	var pixs = $(document).scrollTop()
+// 	pixs = pixs / 100;
+// 	$("body").css({"-webkit-filter": "blur("+pixs+"px)","filter": "blur("+pixs+"px)" })
+//     //}
+// });
 
 function animateHoverNavBar(){
 	var dropDowns = $('div[class*="-dropdown-content"]');
@@ -27,7 +32,13 @@ function animateHoverNavBar(){
 		var dropdownWord = $(this).attr('class').replace('-dropdown-content', '');
 		
 		$(".all-dropdown:has(div."+dropdownWord+"-dropdown-content)").hover(function(){
+			var length = $("."+dropdownWord+"-dropdown-content"+" .all-dropdown-links").length;
+			var infoLinks = $("."+dropdownWord+"-dropdown-content"+" .all-dropdown-links");
+			infoLinks.each(function(){
+				$(this).css('padding-left', length/3+'em');
+			})
 			$("."+dropdownWord+"-dropdown-content").slideDown();
+			
 		}, function(){
 			$("."+dropdownWord+"-dropdown-content").slideUp(200);
 		});

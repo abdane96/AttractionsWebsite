@@ -1,6 +1,7 @@
 .contactJumbo{
-    background-image: url("/images/mainImage.jpg");
-    background-size: 100% 100%;
+    padding-top: 8em;
+    background-image: url("/images/infoImage.jpg");
+    background-size: 100% 110%;
     min-width: 100%;
     background-attachment: fixed;
     margin:0;

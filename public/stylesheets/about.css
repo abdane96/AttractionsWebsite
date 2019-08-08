@@ -1,8 +1,9 @@
 .aboutJumbo{
-    background-image: url("/images/mainImage.jpg");
+    padding-top: 8em;
+    background-image: url("/images/infoImage.jpg");
     background-size: 100% 100%;
-    background-attachment: fixed;
-    height: 100vh;
+    /*background-attachment: fixed;*/
+    /*height: 100vh;*/
     margin: 0;
     color: #EEEFEF;
 }
@@ -11,7 +12,7 @@
     margin-top: 2em;
     color: #EEEFEF;
     font-size: 1.5em;
-    line-height: 2em;
+    /*line-height: 2em;*/
 }
 
 @media screen and (max-width: 992px){

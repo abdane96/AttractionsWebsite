@@ -13,36 +13,49 @@
 			<% } %>
 		</div>
 	<% } %>
-	<div class="jumbotron jumbotron-fluid mainJumbo">
-		<div class="container">
-			<h1 class="main-jumbo-header display-2">Welcome to Rahal!</h1>
-	    	<h2 class="display-4">All your fun and activity needs</h2>
-	    	<% if(!currentUser){ %>
-	    	<p class="lead">Look no further, register below and let us take care of things!</p>
-    		<a type="button" href="/membership" class="btn jumboButton"><i class="fa fa-free-code-camp fa-1x"></i>Get a membership!</a>
-    		<% } else{%>
-    		<p class="lead">You've come to the right place!</p>
-    		<% } %>
-    		
+	<div class="mainJumbo">
+		<div class="row">
+			<div class="col-lg-8 jumboWelcome">
+				<h1 class="main-jumbo-header display-2">Welcome to Rahal!</h1>
+		    	<h1 class="display-5">All your travel needs and more</h1>
+		    	<% if(!currentUser){ %>
+		    	<p class="lead">Look no further, register below and let us take care of everything</p>
+				
+				<% } else{%>
+				<p class="lead">You've come to the right place!</p>
+				<% } %>
+			</div>
+			<div class="col-lg-4 weather-div">
+				<p class="col-sm-12">Weather in <%= weather.name%></p>
+				<p class="">
+					<%=Math.round(weather.main.temp)%> degrees and <%= weather.weather[0].description %>!
+				</p>
+			</div>
 		</div>
 	</div>
-	<div id="weather-div" class="sections">
-		<h1 class="col-sm-12 landingH1">Weather in <%= weather.name%></h1>
-		<p class="weather-info">
-			It is <%=Math.round(weather.main.temp)%> degrees and <%= weather.weather[0].description %>!
-			<% if(weather.main.temp >= 20){%>
-				<br>
-				Perfect weather for our Summer, Fall and Spring activities!
-			<% } else if(weather.main.temp >= 10) { %>
-				<br>
-				Perfect weather for our Fall and Spring activities!
-			<% } else{ %>
-				<br>
-				Perfect weather for our Winter activities!
-			<% } %>
-		</p>
+	
+	<div id="steps-div" class="sections">
+		<div class="steps-contents">
+			<div class="row">
+				<span class=col-lg-1></span>
+				<div class="col-lg-2">
+					<img width="200px" class="img-fluid steps-img" src="/images/steps/step1.png">
+				</div>
+				<div class="col-lg-2">
+					<img width="200px" class="img-fluid steps-img" src="/images/steps/step2.png">
+				</div>
+				<div class="col-lg-2">
+					<img width="200px" class="img-fluid steps-img" src="/images/steps/step3.png">
+				</div>
+				<div class="col-lg-2">
+					<img width="200px" class="img-fluid steps-img" src="/images/steps/step1.png">
+				</div>
+				<div class="col-lg-2">
+					<img width="200px" class="img-fluid steps-img" src="/images/steps/step2.png">
+				</div>
+			</div>
+		</div>
 	</div>
-
 	<div id="activities-div" class="sections">
 		<div class="row">
 			<h1 class="col-sm-12 landingH1">Activities</h1>
